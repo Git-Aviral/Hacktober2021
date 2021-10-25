@@ -35,16 +35,17 @@ int getMissingNo(int a[], int n)
 {
 
 	int total = (n + 1) * (n + 2) / 2;
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < n; i++) //for loop stop its execution when condition is false.
 		total -= a[i];
 	return total;
 }
 
 // Driver Code
-int main()
+int main(void) //Execution of each program starts with main() function
 {
 	int arr[] = { 1, 2, 4, 5, 6 };
 	int n = sizeof(arr) / sizeof(arr[0]);
 	int miss = getMissingNo(arr, n);
 	cout << miss;
+	return 0;
 }
